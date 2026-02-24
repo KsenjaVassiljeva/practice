@@ -2,37 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Портфолио</title>
+    <title>Портфолио Анны Ивановой</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!-- AOS анимации -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
-<body>
-    <body class="light">
-    <button id="theme-button">🌙 Сменить тему</button>
+<body class="light">
+    <!-- Кнопка убрана -->
     <header>
         <h1>Анна Иванова</h1>
         <p>Студентка 4 курса. Разработка на Python</p>
     </header>
-    
-    <section data-aos="fade-up">
+
+    <section id="projects" data-aos="fade-up">
         <h2>Проекты</h2>
         <ul>
-            <li>Игра "Угадай число"</li>
-            <li>Калькулятор</li>
-            <li>Учёт расходов</li>
-        <li>Анализ данных</li>
-    </ul>
-</section>
+            <li class="project-item" data-aos="fade-right" data-aos-delay="100">Игра "Угадай число"</li>
+            <li class="project-item" data-aos="fade-right" data-aos-delay="200">Калькулятор</li>
+            <li class="project-item" data-aos="fade-right" data-aos-delay="300">Учёт расходов</li>
+            <li class="project-item" data-aos="fade-right" data-aos-delay="400">Анализ данных</li>
+        </ul>
+    </section>
 
-    <section>
+    <section id="skills" data-aos="fade-up" data-aos-delay="100">
         <h2>Навыки</h2>
         <p>Python, Git, HTML, CSS, Pandas</p>
     </section>
 
-    <footer>
+    <footer data-aos="fade-up" data-aos-delay="200">
         <p>Email: example@mail.ru</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init(); // инициализация анимаций
+    </script>
 </body>
 </html>

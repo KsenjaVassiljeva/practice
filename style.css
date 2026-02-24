@@ -1,37 +1,31 @@
-body {
-    background: #f5f5f5;
-    color: #222;
-    transition: 0.5s;
-}
+/* style.css */
 
 body.light {
-    background: #f5f5f5;
-    color: #222;
-}
-
-body.light section {
-    background: white;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 body.dark {
-    background: #121212;
-    color: #e0e0e0;
-}
-
-body.dark section {
-    background: #1e1e1e;
+    background-color: #222;
+    color: #f9f9f9;
 }
 
 header {
-    background: #222;
-    color: white;
-    padding: 40px;
     text-align: center;
+    padding: 20px;
 }
 
 section {
-    padding: 30px;
-    margin: 20px;
-    background: white;
-    border-radius: 10px;
+    margin: 40px;
+}
+
+.project-item {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 5px;
+    border-left: 3px solid #3498db;
+}
+
+.project-item:hover {
+    background-color: #eef;
 }
