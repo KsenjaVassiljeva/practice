@@ -2,41 +2,66 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Портфолио Анны Ивановой</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна Иванова | Портфолио</title>
     <link rel="stylesheet" href="style.css">
-    <!-- AOS анимации -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body class="light">
-    <!-- Кнопка убрана -->
-    <header>
-        <h1>Анна Иванова</h1>
-        <p>Студентка 4 курса. Разработка на Python</p>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Анна Иванова</h1>
+            <p>Студентка 4 курса • Python Developer</p>
+        </div>
     </header>
 
-    <section id="projects" data-aos="fade-up">
-        <h2>Проекты</h2>
-        <ul>
-            <li class="project-item" data-aos="fade-right" data-aos-delay="100">Игра "Угадай число"</li>
-            <li class="project-item" data-aos="fade-right" data-aos-delay="200">Калькулятор</li>
-            <li class="project-item" data-aos="fade-right" data-aos-delay="300">Учёт расходов</li>
-            <li class="project-item" data-aos="fade-right" data-aos-delay="400">Анализ данных</li>
-        </ul>
+    <section class="projects">
+        <div class="container">
+            <h2 class="fade-in">Мои проекты</h2>
+            
+            <div class="project-card fade-in">
+                <h3>Игра "Угадай число"</h3>
+                <p>Консольная игра на Python с использованием random и циклов.</p>
+            </div>
+
+            <div class="project-card fade-in">
+                <h3>Калькулятор</h3>
+                <p>Приложение с функциями и обработкой ошибок.</p>
+            </div>
+                
+            <div class="project-card fade-in">
+                <h3>Учёт расходов</h3>
+                <p>Работа с файлами и хранение данных.</p>
+            </div>
+            
+            <div class="project-card fade-in">
+                <h3>Анализ данных</h3>
+                <p>Использование Pandas и Matplotlib для построения графиков.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="skills" data-aos="fade-up" data-aos-delay="100">
-        <h2>Навыки</h2>
-        <p>Python, Git, HTML, CSS, Pandas</p>
+    <section class="skills">
+        <div class="container">
+            <h2>Навыки</h2>
+            <div class="skill-list">
+                <span>Python</span>
+                <span>Git</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Pandas</span>
+            </div>
+        </div>
     </section>
-
-    <footer data-aos="fade-up" data-aos-delay="200">
-        <p>Email: example@mail.ru</p>
+    
+    <footer>
+        <div class="container">
+            <p>example@mail.ru</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Подключаем JS в самом конце -->
     <script src="script.js"></script>
-    <script>
-        AOS.init(); // инициализация анимаций
-    </script>
+
 </body>
 </html>

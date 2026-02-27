@@ -1,31 +1,179 @@
-/* style.css */
-
-body.light {
-    background-color: #f9f9f9;
-    color: #333;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    scroll-behavior: smooth;
 }
 
-body.dark {
-    background-color: #222;
-    color: #f9f9f9;
-}
+/* ================= HERO ================= */
 
-header {
+.hero {
     text-align: center;
-    padding: 20px;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #4F46E5, #6366F1);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+    color: white;
 }
 
-section {
-    margin: 40px;
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.project-item {
-    cursor: pointer;
-    margin: 10px 0;
-    padding: 5px;
-    border-left: 3px solid #3498db;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeDown 1s ease forwards;
 }
 
-.project-item:hover {
-    background-color: #eef;
+.hero p {
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* ================= АНИМАЦИИ ================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* ================= ПРОЕКТЫ ================= */
+
+.projects {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 520px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Блеск при наведении */
+.project-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    top: 0;
+    left: -100%;
+    transition: 0.7s;
+}
+
+.project-card:hover::after {
+    left: 100%;
+}
+
+/* Эффект клика */
+.project-card:active {
+    transform: scale(0.97);
+}
+
+/* ================= НАВЫКИ ================= */
+
+.skills {
+    padding: 80px 20px;
+    text-align: center;
+    background: #EEF2FF;
+}
+
+.skill-list span {
+    display: inline-block;
+    background: white;
+    padding: 12px 22px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-list span:hover {
+    transform: scale(1.08);
+}
+
+/* ================= SCROLL АНИМАЦИЯ ================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #64748B;
+}
+
+/* ================= АДАПТИВ ================= */
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .project-card {
+        margin: 15px;
+        padding: 20px;
+    }
 }

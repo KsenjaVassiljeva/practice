@@ -1,6 +1,18 @@
-const projects = document.querySelectorAll('.project-item');
-projects.forEach(project => {
-    project.addEventListener('click', () => {
-        alert(`Вы выбрали проект: ${project.textContent}`);
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
     });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
 });
